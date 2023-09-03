@@ -10,6 +10,10 @@
         background: url(../assets/images/bg-sidebar-mobile.svg)no-repeat center/cover;
         padding: 40px 0;
     }
+    .activee{
+        background-color: #e2e8f0;
+        color: #000 !important;
+    }
 }
 @layer components{
 

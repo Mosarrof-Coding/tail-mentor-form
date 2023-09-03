@@ -3,27 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Multi-step form</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="./dist/output.css">
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  
-  <section id="multi-form" class="bg-sky-50 md:h-screen grid md:place-items-center">
+  <section id="multi-form" class="bg-sky-50  py-12 block">
     <div class="container max-w-[970px] mx-auto">
-      <div class="form-wrapper md:bg-white flex flex-col md:flex-row md:gap-5 items-center md:rounded-xl md:p-3 md:shadow-lg md:mx-5">
-        <aside class="aside-mobile md:aside w-full md:basis-1/3 md:rounded-xl h-48 md:h-[600px] min-w-[250px] md:p-5">
+      <div class="form-wrapper md:bg-white flex flex-col md:flex-row md:gap-10 items-center md:rounded-xl md:p-3 md:shadow-lg md:mx-5">
+        <aside class="aside-mobile md:aside w-full md:basis-1/3 md:rounded-xl h-48 md:h-[600px] min-w-[250px] md:p-5 bg-pink-400 p-1 z-50">
           <div class="flex md:flex-col justify-center gap-4">
             <div class="steps flex items-center gap-5 mb-6">
-              <span class="w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer">
+              <span class="activee w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer circleIndicator">
                 1
               </span>
               <span class="hidden md:block"> 
@@ -32,7 +24,7 @@
               </span>
             </div>
             <div class="steps flex items-center gap-5 mb-6">
-              <span class="w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer">
+              <span class="w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer circleIndicator">
                 2
               </span>
               <span class="hidden md:block"> 
@@ -41,7 +33,7 @@
               </span>
             </div>
             <div class="steps flex items-center gap-5 mb-6">
-              <span class="w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer">
+              <span class="w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer circleIndicator">
                 3
               </span>
               <span class="hidden md:block"> 
@@ -50,7 +42,7 @@
               </span>
             </div>
             <div class="steps flex items-center gap-5 mb-6">
-              <span class="w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer">
+              <span class="w-8 h-8 rounded-full hover:bg-slate-200 text-white hover:text-black border border-gray-300 grid place-items-center cursor-pointer circleIndicator">
                 4
               </span>
               <span class="hidden md:block"> 
@@ -60,299 +52,301 @@
             </div>
           </div>
         </aside>
-        <div class="form w-full md:basis-2/3 md:bg-white -mt-20 md:-mt-0">
-          <!-- personal info -->
-          <div class="personal-info demoDIv">
-            <div class="forminner w-full px-2 sm:px-5">
-              <form action="" class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
-                <div class="feature">
-                  <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Personal info</h2>
-                  <p class="text-gray-400 pb-5">Please provide your name, email address and phone number</p>
-                </div>
-                <div class="input-group flex flex-col relative mt-5">
-                  <label for="name" class="mb-2">Name</label>
-                  <input type="text" name="name" id="name" placeholder="Your name" class="border px-5 py-2 text-lg text-blue-900 font-semibold focus:outline-blue-200 rounded-lg">
-                  <small class="absolute right-1 top-1 text-red-600 font-medium">This field is Required</small>
-                </div>
-                <div class="input-group flex flex-col relative mt-5">
-                  <label for="email" class="mb-2">Email</label>
-                  <input type="email" name="email" id="email" placeholder="Your email" class="border px-5 py-2 text-lg text-blue-900 font-semibold focus:outline-blue-200 rounded-lg">
-                  <small class="absolute right-1 top-1 text-red-600 font-medium">This field is Required</small>
-                </div>
-                <div class="input-group flex flex-col relative mt-5">
-                  <label for="phone" class="mb-2">Phone</label>
-                  <input type="tel" name="phone" id="phone" placeholder="Your phone" class="border px-5 py-2 text-lg text-blue-900 font-semibold focus:outline-blue-200 rounded-lg">
-                  <small class="absolute right-1 top-1 text-red-600 font-medium">This field is Required</small>
-                </div>
-              </form>
-            </div>
-            <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2">
-              <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg">Next Step</button>
-            </div>
-          </div>
-          <!-- planning -->
-          <div class="planning demoDIv hidden">
-            <div class="planninginner w-full px-2 sm:px-5">
-              <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
-                <div class="feature">
-                  <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Select your plane</h2>
-                  <p class="text-gray-400 pb-8">You have the option of monthly or yearly billing.</p>
-                </div>
-                <div class="games flex justify-start flex-col md:flex-row gap-5">
-                  <div class="flex gap-5 md:gap-10 basis-[100%] py-3 px-5 rounded-xl border md:flex-col">
-                    <span>
-                      <img src="./assets/images/icon-arcade.svg" alt="arcade">
-                    </span>
-                    <span>
-                      <h4 class="text-lg font-semibold text-blue-950">Arcade</h4>
-                      <h6 class="text-sm text-gray-400">$9/month</h6>
-                    </span>
+        <div class="form md:basis-2/3 bg-red-600 p-2 md:bg-white -mt-20 md:-mt-0 overflow-x-hidden">
+          <div class="slider-parent flex items-center w-[2200px] scroller-body duration-500">         
+            <!-- personal info ---->
+            <div class="personal-info demoDIv">
+              <div class="forminner lg:w-[550px] px-2 sm:px-5">
+                <form action="" class="bg-white shadow-lg md:shadow-none p-5 rounded-xl Form-info" onsubmit = "handleform">
+                  <div class="feature">
+                    <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Personal info</h2>
+                    <p class="text-gray-400 pb-5">Please provide your name, email address and phone number</p>
                   </div>
-                  <div class="flex gap-5 md:gap-10 basis-[100%] py-3 px-5 rounded-xl border md:flex-col">
-                    <span>
-                      <img src="./assets/images/icon-advanced.svg" alt="arcade">
-                    </span>
-                    <span>
-                      <h4 class="text-lg font-semibold text-blue-950">Advanched</h4>
-                      <h6 class="text-sm text-gray-400">$12/month</h6>
-                    </span>
+                  <div class="input-group flex flex-col relative mt-5">
+                    <label for="name" class="mb-2">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Your name" class="border px-5 py-2 text-lg text-blue-900 font-semibold focus:outline-blue-200 rounded-lg" onkeyup = 'fname()' required>
+                    <small class="absolute right-1 top-1 text-red-600 font-medium fname-err"></small>
                   </div>
-                  <div class="flex gap-5 md:gap-10 basis-[100%] py-3 px-5 rounded-xl border md:flex-col">
-                    <span>
-                      <img src="./assets/images/icon-pro.svg" alt="arcade">
-                    </span>
-                    <span>
-                      <h4 class="text-lg font-semibold text-blue-950">Pro</h4>
-                      <h6 class="text-sm text-gray-400">$15/month</h6>
-                    </span>
+                  <div class="input-group flex flex-col relative mt-5">
+                    <label for="email" class="mb-2">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Your email" class="border px-5 py-2 text-lg text-blue-900 font-semibold focus:outline-blue-200 rounded-lg" onkeyup = 'Email()' required>
+                    <small class="absolute right-1 top-1 text-red-600 font-medium mail-err"></small>
                   </div>
-                </div>
-                <div class="switch-btn flex justify-center items-center gap-5 my-5 bg-gray-100 w-full rounded-xl py-2">
-                  <span class="text-lg text-gray-600">Monthly</span>
-                  <span class="flex gap-2 bg-blue-900 p-1 rounded-full">
-                    <div class="w-5 h-5 bg-blue-800 rounded-full"></div>
-                    <div class="w-5 h-5 bg-white rounded-full"></div>
-                  </span>
-                  <span class="text-lg text-gray-900 font-medium">Yearly</span>
-                </div>
+                  <div class="input-group flex flex-col relative mt-5">
+                    <label for="phone" class="mb-2">Phone</label>
+                    <input type="tel" name="phone" id="phone" placeholder="Your phone" class="border px-5 py-2 text-lg text-blue-900 font-semibold focus:outline-blue-200 rounded-lg" onkeyup = 'Phone()' required>
+                    <small class="absolute right-1 top-1 text-red-600 font-medium phnErr"></small>
+                  </div>
+                </form>
+              </div>
+              <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2">
+                <button type="button" class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg nxt-btn">Next Step</button>
               </div>
             </div>
-            <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
-              <button class="text-gray-500 font-semibold text-lg">Go back</button>
-              <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg">Next Step</button>
-            </div>
-          </div>
-          <!-- add-ons/month -->
-          <div class="add-ons-mo demoDIv hidden">
-            <div class="add-ons-inner w-full px-2 sm:px-5">
-              <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
-                <div class="feature">
-                  <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Pick add-ons</h2>
-                  <p class="text-gray-400 pb-8">Access to multiplayer games</p>
+            <!-- planning --------->
+            <div class="planning demoDIv">
+              <div class="planninginner lg:w-[550px] px-2 sm:px-5">
+                <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
+                  <div class="feature">
+                    <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Select your plane</h2>
+                    <p class="text-gray-400 pb-8">You have the option of monthly or yearly billing.</p>
+                  </div>
+                  <div class="games flex justify-start flex-col md:flex-row gap-5">
+                    <div class="flex gap-5 md:gap-10 basis-[100%] py-3 px-5 rounded-xl border md:flex-col">
+                      <span>
+                        <img src="./assets/images/icon-arcade.svg" alt="arcade">
+                      </span>
+                      <span>
+                        <h4 class="text-lg font-semibold text-blue-950">Arcade</h4>
+                        <h6 class="text-sm text-gray-400">$9/month</h6>
+                      </span>
+                    </div>
+                    <div class="flex gap-5 md:gap-10 basis-[100%] py-3 px-5 rounded-xl border md:flex-col">
+                      <span>
+                        <img src="./assets/images/icon-advanced.svg" alt="arcade">
+                      </span>
+                      <span>
+                        <h4 class="text-lg font-semibold text-blue-950">Advanched</h4>
+                        <h6 class="text-sm text-gray-400">$12/month</h6>
+                      </span>
+                    </div>
+                    <div class="flex gap-5 md:gap-10 basis-[100%] py-3 px-5 rounded-xl border md:flex-col">
+                      <span>
+                        <img src="./assets/images/icon-pro.svg" alt="arcade">
+                      </span>
+                      <span>
+                        <h4 class="text-lg font-semibold text-blue-950">Pro</h4>
+                        <h6 class="text-sm text-gray-400">$15/month</h6>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="switch-btn flex justify-center items-center gap-5 my-5 bg-gray-100 w-full rounded-xl py-2">
+                    <span class="text-lg text-gray-600">Monthly</span>
+                    <span class="flex gap-2 bg-blue-900 p-1 rounded-full">
+                      <div class="w-5 h-5 bg-blue-800 rounded-full"></div>
+                      <div class="w-5 h-5 bg-white rounded-full"></div>
+                    </span>
+                    <span class="text-lg text-gray-900 font-medium">Yearly</span>
+                  </div>
                 </div>
-                <div class="games flex flex-col gap-5">
-                  <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="onstext flex gap-5 items-center">
-                      <span>
-                        <input type="checkbox">
-                      </span>
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Online service</h4>
-                        <small class="text-gray-400">Access to multiplayer games</small>
-                      </span>
-                    </div>
-                    <span>
-                      <h6 class="text-base font-semibold text-blue-500">$1/mo</h6>
-                    </span>
-                  </div>
-                  <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="onstext flex gap-5 items-center">
-                      <span>
-                        <input type="checkbox">
-                      </span>
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Larger storage</h4>
-                        <small class="text-gray-400">Extra 1TB of cloud save</small>
-                      </span>
-                    </div>
-                    <span>
-                      <h6 class="text-base font-semibold text-blue-500">$2/mo</h6>
-                    </span>
-                  </div>
-                  <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="onstext flex gap-5 items-center">
-                      <span>
-                        <input type="checkbox">
-                      </span>
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Customizable profile</h4>
-                        <small class="text-gray-400">Customize theme on your profile</small>
-                      </span>
-                    </div>
-                    <span>
-                      <h6 class="text-base font-semibold text-blue-500">$3/mo</h6>
-                    </span>
-                  </div>
-                </div>  
+              </div>
+              <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
+                <button class="text-gray-500 font-semibold text-lg prvBtn">Go back</button>
+                <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg nxt-btn">Next Step</button>
               </div>
             </div>
-            <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
-              <button class="text-gray-500 font-semibold text-lg">Go back</button>
-              <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg">Next Step</button>
-            </div>
-          </div>
-          <!-- add-ons/year -->
-          <div class="add-ons-yr demoDIv hidden">
-            <div class="add-ons-inner w-full px-2 sm:px-5">
-              <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
-                <div class="feature">
-                  <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Pick add-ons</h2>
-                  <p class="text-gray-400 pb-8">Access to multiplayer games</p>
+            <!-- add-ons/month ---->
+            <div class="add-ons-mo demoDIv">
+              <div class="add-ons-inner lg:w-[550px] px-2 sm:px-5">
+                <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
+                  <div class="feature">
+                    <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Pick add-ons</h2>
+                    <p class="text-gray-400 pb-8">Access to multiplayer games</p>
+                  </div>
+                  <div class="games flex flex-col gap-5">
+                    <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="onstext flex gap-5 items-center">
+                        <span>
+                          <input type="checkbox">
+                        </span>
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Online service</h4>
+                          <small class="text-gray-400">Access to multiplayer games</small>
+                        </span>
+                      </div>
+                      <span>
+                        <h6 class="text-base font-semibold text-blue-500">$1/mo</h6>
+                      </span>
+                    </div>
+                    <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="onstext flex gap-5 items-center">
+                        <span>
+                          <input type="checkbox">
+                        </span>
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Larger storage</h4>
+                          <small class="text-gray-400">Extra 1TB of cloud save</small>
+                        </span>
+                      </div>
+                      <span>
+                        <h6 class="text-base font-semibold text-blue-500">$2/mo</h6>
+                      </span>
+                    </div>
+                    <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="onstext flex gap-5 items-center">
+                        <span>
+                          <input type="checkbox">
+                        </span>
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Customizable profile</h4>
+                          <small class="text-gray-400">Customize theme on your profile</small>
+                        </span>
+                      </div>
+                      <span>
+                        <h6 class="text-base font-semibold text-blue-500">$3/mo</h6>
+                      </span>
+                    </div>
+                  </div>  
                 </div>
-                <div class="games flex flex-col gap-5">
-                  <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="onstext flex gap-5 items-center">
-                      <span>
-                        <input type="checkbox">
-                      </span>
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Online service</h4>
-                        <small class="text-gray-400">Access to multiplayer games</small>
-                      </span>
-                    </div>
-                    <span>
-                      <h6 class="text-base font-semibold text-blue-500">$10/yr</h6>
-                    </span>
-                  </div>
-                  <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="onstext flex gap-5 items-center">
-                      <span>
-                        <input type="checkbox">
-                      </span>
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Larger storage</h4>
-                        <small class="text-gray-400">Extra 1TB of cloud save</small>
-                      </span>
-                    </div>
-                    <span>
-                      <h6 class="text-base font-semibold text-blue-500">$16/yr</h6>
-                    </span>
-                  </div>
-                  <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="onstext flex gap-5 items-center">
-                      <span>
-                        <input type="checkbox">
-                      </span>
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Customizable profile</h4>
-                        <small class="text-gray-400">Customize theme on your profile</small>
-                      </span>
-                    </div>
-                    <span>
-                      <h6 class="text-base font-semibold text-blue-500">$27/yr</h6>
-                    </span>
-                  </div>
-                </div>  
+              </div>
+              <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
+                <button class="text-gray-500 font-semibold text-lg prvBtn">Go back</button>
+                <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg nxt-btn">Next Step</button>
               </div>
             </div>
-            <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
-              <button class="text-gray-500 font-semibold text-lg">Go back</button>
-              <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg">Next Step</button>
-            </div>
-          </div>
-          <!-- finishing/month -->
-          <div class="finising-mo demoDIv hidden">
-            <div class="add-ons-inner w-full px-2 sm:px-5">
-              <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
-                <div class="feature">
-                  <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Finishing up</h2>
-                  <p class="text-gray-400 pb-8">Double-check everything looks OK before confirming</p>
-                </div>
-                <div class="games flex flex-col gap-5">
-                  <div class="bg-white py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="w-full flex items-center justify-between pb-4">
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Arcade(Monthly)</h4>
-                        <small class="text-gray-400 underline">Change</small>
-                      </span>
-                      <span>
-                        <h6 class="text-lg font-semibold text-blue-500">$9/mo</h6>
-                      </span>
-                    </div>
-                    <div class="charge border-t py-2">
-                      <span class="flex items-center justify-between">
-                        <span class="text-gray-400">Online service</span>
-                        <span class="text-gray-900 text-lg mt-2">$1/mo</span>
-                      </span>
-                      <span class="flex items-center justify-between">
-                        <span class="text-gray-400">Larger storage</span>
-                        <span class="text-gray-900 text-lg">$2/mo</span>
-                      </span>
-                    </div>
+            <!-- add-ons/year ----->
+            <div class="add-ons-yr demoDIv">
+              <div class="add-ons-inner lg:w-[550px] px-2 sm:px-5">
+                <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
+                  <div class="feature">
+                    <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Pick add-ons</h2>
+                    <p class="text-gray-400 pb-8">Access to multiplayer games</p>
                   </div>
-                  <did class="flex items-center justify-between py-2 px-5">
-                    <span class="text-gray-400">Total(Per month)</span>
-                    <span class="text-blue-950 text-xl font-bold">$12/mo</span>
-                  </did>
-                </div>  
+                  <div class="games flex flex-col gap-5">
+                    <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="onstext flex gap-5 items-center">
+                        <span>
+                          <input type="checkbox">
+                        </span>
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Online service</h4>
+                          <small class="text-gray-400">Access to multiplayer games</small>
+                        </span>
+                      </div>
+                      <span>
+                        <h6 class="text-base font-semibold text-blue-500">$10/yr</h6>
+                      </span>
+                    </div>
+                    <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="onstext flex gap-5 items-center">
+                        <span>
+                          <input type="checkbox">
+                        </span>
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Larger storage</h4>
+                          <small class="text-gray-400">Extra 1TB of cloud save</small>
+                        </span>
+                      </div>
+                      <span>
+                        <h6 class="text-base font-semibold text-blue-500">$16/yr</h6>
+                      </span>
+                    </div>
+                    <div class="w-full flex items-center justify-between gap-5 py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="onstext flex gap-5 items-center">
+                        <span>
+                          <input type="checkbox">
+                        </span>
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Customizable profile</h4>
+                          <small class="text-gray-400">Customize theme on your profile</small>
+                        </span>
+                      </div>
+                      <span>
+                        <h6 class="text-base font-semibold text-blue-500">$27/yr</h6>
+                      </span>
+                    </div>
+                  </div>  
+                </div>
+              </div>
+              <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
+                <button class="text-gray-500 font-semibold text-lg prvBtn">Go back</button>
+                <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg nxt-btn">Next Step</button>
               </div>
             </div>
-            <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
-              <button class="text-gray-500 font-semibold text-lg">Go back</button>
-              <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg">Confirm</button>
-            </div>
-          </div>
-          <!-- finishing/year -->
-          <div class="finising-yr demoDIv hidden">
-            <div class="add-ons-inner w-full px-2 sm:px-5">
-              <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
-                <div class="feature">
-                  <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Finishing up</h2>
-                  <p class="text-gray-400 pb-8">Double-check everything looks OK before confirming</p>
-                </div>
-                <div class="games flex flex-col gap-5">
-                  <div class="bg-white py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
-                    <div class="w-full flex items-center justify-between pb-4">
-                      <span>
-                        <h4 class="text-lg font-semibold text-blue-950">Arcade(Yearly)</h4>
-                        <small class="text-gray-400 underline">Change</small>
-                      </span>
-                      <span>
-                        <h6 class="text-lg font-semibold text-blue-500">$98/yr</h6>
-                      </span>
-                    </div>
-                    <div class="charge border-t py-2">
-                      <span class="flex items-center justify-between">
-                        <span class="text-gray-400">Online service</span>
-                        <span class="text-gray-900 text-lg mt-2">$10/yr</span>
-                      </span>
-                      <span class="flex items-center justify-between">
-                        <span class="text-gray-400">Larger Storage</span>
-                        <span class="text-gray-900 text-lg">$20/yr</span>
-                      </span>
-                    </div>
+            <!-- finishing/month -->
+            <div class="finising-mo demoDIv">
+              <div class="add-ons-inner lg:w-[550px] px-2 sm:px-5">
+                <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
+                  <div class="feature">
+                    <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Finishing up</h2>
+                    <p class="text-gray-400 pb-8">Double-check everything looks OK before confirming</p>
                   </div>
-                  <did class="flex items-center justify-between py-2 px-5">
-                    <span class="text-gray-400">Total(Per month)</span>
-                    <span class="text-blue-950 text-xl font-bold">$128/yr</span>
-                  </did>
-                </div>  
+                  <div class="games flex flex-col gap-5">
+                    <div class="bg-white py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="w-full flex items-center justify-between pb-4">
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Arcade(Monthly)</h4>
+                          <small class="text-gray-400 underline">Change</small>
+                        </span>
+                        <span>
+                          <h6 class="text-lg font-semibold text-blue-500">$9/mo</h6>
+                        </span>
+                      </div>
+                      <div class="charge border-t py-2">
+                        <span class="flex items-center justify-between">
+                          <span class="text-gray-400">Online service</span>
+                          <span class="text-gray-900 text-lg mt-2">$1/mo</span>
+                        </span>
+                        <span class="flex items-center justify-between">
+                          <span class="text-gray-400">Larger storage</span>
+                          <span class="text-gray-900 text-lg">$2/mo</span>
+                        </span>
+                      </div>
+                    </div>
+                    <did class="flex items-center justify-between py-2 px-5">
+                      <span class="text-gray-400">Total(Per month)</span>
+                      <span class="text-blue-950 text-xl font-bold">$12/mo</span>
+                    </did>
+                  </div>  
+                </div>
+              </div>
+              <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
+                <button class="text-gray-500 font-semibold text-lg prvBtn">Go back</button>
+                <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg nxt-btn">Confirm</button>
               </div>
             </div>
-            <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
-              <button class="text-gray-500 font-semibold text-lg">Go back</button>
-              <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg">Confirm</button>
+            <!-- finishing/year --->
+            <div class="finising-yr demoDIv">
+              <div class="add-ons-inner lg:w-[550px] px-2 sm:px-5">
+                <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
+                  <div class="feature">
+                    <h2 class="text-[24px] sm:text-3xl md:text-4xl text-blue-950 font-bold mb-2">Finishing up</h2>
+                    <p class="text-gray-400 pb-8">Double-check everything looks OK before confirming</p>
+                  </div>
+                  <div class="games flex flex-col gap-5">
+                    <div class="bg-white py-3 px-5 rounded-xl border hover:border-gray-950 hover:bg-blue-50">
+                      <div class="w-full flex items-center justify-between pb-4">
+                        <span>
+                          <h4 class="text-lg font-semibold text-blue-950">Arcade(Yearly)</h4>
+                          <small class="text-gray-400 underline">Change</small>
+                        </span>
+                        <span>
+                          <h6 class="text-lg font-semibold text-blue-500">$98/yr</h6>
+                        </span>
+                      </div>
+                      <div class="charge border-t py-2">
+                        <span class="flex items-center justify-between">
+                          <span class="text-gray-400">Online service</span>
+                          <span class="text-gray-900 text-lg mt-2">$10/yr</span>
+                        </span>
+                        <span class="flex items-center justify-between">
+                          <span class="text-gray-400">Larger Storage</span>
+                          <span class="text-gray-900 text-lg">$20/yr</span>
+                        </span>
+                      </div>
+                    </div>
+                    <did class="flex items-center justify-between py-2 px-5">
+                      <span class="text-gray-400">Total(Per month)</span>
+                      <span class="text-blue-950 text-xl font-bold">$128/yr</span>
+                    </did>
+                  </div>  
+                </div>
+              </div>
+              <div class="button w-full mt-24 text-right bg-white px-5 md:px-10 py-2 flex justify-between items-center">
+                <button class="text-gray-500 font-semibold text-lg prvBtn">Go back</button>
+                <button class="px-6 pt-1.5 pb-2 bg-blue-950 rounded-lg text-white font-semibold text-lg nxt-btn">Confirm</button>
+              </div>
             </div>
-          </div>
-          <!-- Thanks -->
-          <div class="Thanks  demoDIv hidden">
-            <div class="add-ons-inner w-full px-2 sm:px-5">
-              <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
-                <div class="grid place-items-center text-center">
-                  <img src="./assets/images/icon-thank-you.svg" alt="" class="mb-6 w-14 md:w-auto">
-                  <h1 class="text-3xl md:text-5xl font-bold pb-4">Thank you</h1>
-                  <p>Thanks for confirming your subscription!We hope you have fun using our platform.If you ever need support, please feel free email us at support@loremgaming.com</p>
-                </div>  
+            <!-- Thanks ----------->
+            <div class="Thanks demoDIv">
+              <div class="add-ons-inner lg:w-[550px] px-2 sm:px-5">
+                <div class="bg-white shadow-lg md:shadow-none p-5 rounded-xl">
+                  <div class="grid place-items-center text-center">
+                    <img src="./assets/images/icon-thank-you.svg" alt="" class="mb-6 w-14 md:w-auto">
+                    <h1 class="text-3xl md:text-5xl font-bold pb-4">Thank you</h1>
+                    <p>Thanks for confirming your subscription!We hope you have fun using our platform.If you ever need support, please feel free email us at support@loremgaming.com</p>
+                  </div>  
+                </div>
               </div>
             </div>
           </div>
@@ -360,10 +354,8 @@
       </div>
     </div>
   </section>
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Md.Mosharaf Hosain</a>.
-  </div> -->
+
+
+  <script src="./main.js"></script>
 </body>
 </html>
