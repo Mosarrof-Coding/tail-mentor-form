@@ -37,11 +37,11 @@ let x = 0;
 nxtbtn.map((item, index)=>{
     item.addEventListener('click', function(){
         if (x > '-3300') {
-            x = x - 550,
+            x = x - 550;
             scroller.style.marginLeft = x + 'px';
         }
         circleIndicator.map((lol)=>{
-            lol.classList.remove('activee')
+            lol.classList.remove('activee');
         })
         circleIndicator[index + 1].classList.add('activee');
     })
@@ -49,7 +49,7 @@ nxtbtn.map((item, index)=>{
 prvBtn.map((item, index)=>{
     item.addEventListener('click', function(){
         if (x < 0) {
-            x = x + 550,
+            x = x + 550;
             scroller.style.marginLeft = x + 'px';
         }
         circleIndicator.map((lol)=>{
